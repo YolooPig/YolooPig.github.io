@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="pig, Hexo">
+    <meta name="keywords" content="Hexo">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>pig | Hexo</title>
+    <title>Hexo</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">pig</h1>
+                    <h1 class="description center-align post-title"></h1>
                 </div>
             </div>
         </div>
@@ -443,7 +443,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2023-10-27
+                    2023-12-04
                 </div>
                 
 
@@ -464,7 +464,124 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="去问人体"><a href="#去问人体" class="headerlink" title="去问人体"></a>去问人体</h1><p>下面那句</p>
+                <h1 id="第一章-kali系统介绍"><a href="#第一章-kali系统介绍" class="headerlink" title="第一章    kali系统介绍"></a>第一章    kali系统介绍</h1><p><img src="/./kali./image-20231202174234361.png" alt="image-20231202174234361"></p>
+<h2 id="虚拟机配置-安装kali系统"><a href="#虚拟机配置-安装kali系统" class="headerlink" title="虚拟机配置(安装kali系统)"></a>虚拟机配置(安装kali系统)</h2><h3 id="须知："><a href="#须知：" class="headerlink" title="须知："></a>须知：</h3><p>1.易错：<img src="/./kali./image-20231202174848441.png" alt="image-20231202174848441"></p>
+<p>2.镜像</p>
+<p><img src="/./kali.assets/image-20231202175139428.png" alt="image-20231202175139428"></p>
+<p>3.对于cpu的处理</p>
+<p><img src="/./kali.assets/image-20231202175323995.png" alt="image-20231202175323995"></p>
+<h2 id="设置root用户密码"><a href="#设置root用户密码" class="headerlink" title="设置root用户密码"></a>设置root用户密码</h2><p>1.<strong>设置root用户密码</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">**┌──****(kali****㉿****xuegod53)-[~]**</span><br><span class="line"></span><br><span class="line">**└─$ sudo passwd root**</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">**[sudo] kali 的密码：****k****ali**     **#注：需要提权输入****kali****普通用户的密码**</span><br><span class="line"></span><br><span class="line">**设置新密码**</span><br><span class="line"></span><br><span class="line">**新的 密码：****1****23456**</span><br><span class="line"></span><br><span class="line">**重新输入新的 密码：****1****23456**</span><br><span class="line"></span><br><span class="line">**passwd：已成功更新密码**</span><br></pre></td></tr></table></figure>
+
+<p><strong>切换到root用户</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">**└─$ su root**   **#****切换到root用户，当会话还是使用kali用户的环境变量**   </span><br><span class="line"></span><br><span class="line">**密码：****1****23456**</span><br><span class="line"></span><br><span class="line">**┌──(root****���****xuegod53)-[/home/kali]**</span><br><span class="line"></span><br><span class="line">**└─#** **exit**</span><br><span class="line"></span><br><span class="line">**┌──****(kali****㉿****xuegod53)-[~]**</span><br><span class="line"></span><br><span class="line">**└─$ su** **-** **root**  **#****切换root用户时，记得加一个减号-，这样可以彻底切换到root用户。**</span><br><span class="line"></span><br><span class="line">**密码：****1****23456**</span><br><span class="line"></span><br><span class="line">**┌──(root****���****xuegod53)-[~]**</span><br><span class="line"></span><br><span class="line">**└─#pwd**</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<p><strong>下次登录Kali系统就可以使用root账号直接登录了。</strong></p>
+<p><strong>查看当前使用的Shell类型</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">**└─# echo $SHELL**</span><br><span class="line"></span><br><span class="line">**/usr/bin/zsh  #****可以看到我们使用是zsh类型的shell。centos****7****使用的是bash类型的shell。 zsh功能更强，而且zsh完全兼容bash的用法和命令。**</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="修改apt安装包的源为国内源-提升访问速度"><a href="#修改apt安装包的源为国内源-提升访问速度" class="headerlink" title="修改apt安装包的源为国内源-提升访问速度"></a>修改apt安装包的源为国内源-提升访问速度</h2><h3 id="配置apt国内源"><a href="#配置apt国内源" class="headerlink" title="配置apt国内源"></a><strong>配置apt国内源</strong></h3><p><strong>因为Kali自带的源是国外的，经常会因为网络问题，而无法安装或更新软件包。而且国外的源速度很慢。所以我们直接使用国内的源，方便快速。</strong></p>
+<p><strong>#中科大稳定版分支K<strong><strong>ali</strong></strong>源</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">**deb https://mirrors.ustc.edu.cn/kali kali-last-snapshot main non-free contrib**</span><br><span class="line"></span><br><span class="line">**deb-src https://mirrors.ustc.edu.cn/kali kali-last-snapshot main non-free contrib**</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="apt-update、apt-upgrade-和apt-dist-upgrade-的区别"><a href="#apt-update、apt-upgrade-和apt-dist-upgrade-的区别" class="headerlink" title="apt update、apt upgrade 和apt dist-upgrade 的区别"></a><strong>apt update、apt upgrade 和apt dist-upgrade 的区别</strong></h2><p><strong>1、apt update</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">**┌──(root****���****xuegod53)-[~]**</span><br><span class="line"></span><br><span class="line">**└─# apt update**  </span><br></pre></td></tr></table></figure>
+
+<p><strong>注：apt</strong> <strong>update 的作用是从&#x2F;etc&#x2F;apt&#x2F;sources.list文件中定义的源中****获取的最新的软件包列表。</strong></p>
+<p><strong>即<strong><strong>运行apt update并没有更新软件</strong></strong>，而是相当于windows下面的检查更新，获取的是软件的状态。</strong></p>
+<p><strong>└─#</strong> <strong>apt update</strong>  <strong>#执行这个命令，可以查看更新列表</strong></p>
+<h2 id="apt和apt-get的区别"><a href="#apt和apt-get的区别" class="headerlink" title="apt和apt-get的区别"></a>apt和apt-get的区别</h2><p><strong>apt命令概述： apt是一条linux命令，适用于deb包管理式的操作系统，主要用于自动从互联网的软件仓库中搜索、安装、升级、卸载软件或操作系统。****deb包是Debian软件包格式的文件扩展名。</strong></p>
+<p><strong>apt 可以看作 apt-get 和 apt-cache 命令的子集, 可以为包管理提供必要的命令选项。</strong></p>
+<p><strong>apt提供了大多数与apt-get及apt-cache有的功能，但更方便使用</strong></p>
+<p><strong>apt-get 虽然没被弃用，但作为普通用户，还是应该首先使用 apt。</strong></p>
+<p><strong>注：apt install和apt-get install 功能一样，都是安装软件包，没有区别。</strong></p>
+<h2 id="总结："><a href="#总结：" class="headerlink" title="总结："></a><strong>总结：</strong></h2><p><strong>1.1  Kali Linux简介</strong></p>
+<p><strong>1.2  使用VM虚拟机安装Kali</strong></p>
+<p><strong>1.3  配置Kali的apt命令在线安装包的源为国内源</strong></p>
+<h1 id="第二章-配置本地网络并实现xshell连接kali系统"><a href="#第二章-配置本地网络并实现xshell连接kali系统" class="headerlink" title="第二章     配置本地网络并实现xshell连接kali系统"></a>第二章     配置本地网络并实现xshell连接kali系统</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">注意大小写*******</span><br></pre></td></tr></table></figure>
+
+<h2 id="本地网络配置"><a href="#本地网络配置" class="headerlink" title="*本地网络配置*"></a><strong>*本地网络配置*</strong></h2><h3 id="1-配置静态IP地址"><a href="#1-配置静态IP地址" class="headerlink" title="1.配置静态IP地址"></a>1.配置静态IP地址</h3><p><strong>注</strong>：使用桥接网络请根据宿主机I<strong>P地址修改</strong>**</p>
+<p><strong>接下来我来教给大家如何查看物理机的ip</strong></p>
+<p><strong>查看物理机win<strong><strong>10</strong></strong>的IP：</strong></p>
+<p><strong>按下windows键+R，</strong></p>
+<p><img src="/./kali.assets/image-20231203000053991.png" alt="image-20231203000053991"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">**输入命令：*****\*ipconfig\****</span><br></pre></td></tr></table></figure>
+
+<p><img src="/./kali.assets/image-20231203000135805.png" alt="image-20231203000135805"></p>
+<p><strong>重启网络服务</strong>                                                            </p>
+<p><strong>关闭NetworkManager</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">**┌──(root****���****xuegod53)-[~]**</span><br><span class="line"></span><br><span class="line">**└─# systemctl stop NetworkManager** </span><br></pre></td></tr></table></figure>
+
+<p><strong>注：关闭NetworkManager服务，该服务是网络服务的图形管理工具，该服务会自动接管networking服务，有可能造成重启networking服务时配置不生效的问题。</strong></p>
+<p><strong>再次重启网络服务</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">**└─# systemctl restart networking**</span><br></pre></td></tr></table></figure>
+
+<p><strong>查看IP：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">**┌──(root****���****xuegod53)-[~]**</span><br><span class="line"></span><br><span class="line">**└─# ifconfig** </span><br></pre></td></tr></table></figure>
+
+<p><strong>添加dns服务器配置</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">**└─# vim /etc/resolv.conf** </span><br><span class="line"></span><br><span class="line">**# Generated by NetworkManager**</span><br><span class="line"></span><br><span class="line">**nameserver**  **114.114.114.114**</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-配置临时ip地址"><a href="#2-配置临时ip地址" class="headerlink" title="2.配置临时ip地址"></a>2.配置临时ip地址</h3><p><strong>添加dns服务器配置</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">**┌──(root****���****xuegod53)-[~]**</span><br><span class="line"></span><br><span class="line">**└─# ifconfig eth0:****1** **192.168.1.5****4****/24**</span><br></pre></td></tr></table></figure>
+
+<p>​			<strong>#给一个网卡配置临时配置IP。</strong></p>
+<p><strong>注：临时IP重启网络服务或<strong><strong>re</strong></strong>boot****重启系统就没有了。</strong></p>
+<h2 id="受限制的网络环境"><a href="#受限制的网络环境" class="headerlink" title="受限制的网络环境"></a>受限制的网络环境</h2><p>&#x3D;&#x3D;<strong>校园网、办公网络、拨号网络可能存在网络验证，必须使用虚拟机的N<strong><strong>AT</strong></strong>模式网络</strong>&#x3D;&#x3D;<strong>*本地网络配置*</strong></p>
+<h3 id="1-配置IP"><a href="#1-配置IP" class="headerlink" title="1.配置IP"></a>1.配置IP</h3><p><img src="/./kali.assets/image-20231204200720336.png" alt="image-20231204200720336"></p>
+<p><img src="/./kali.assets/image-20231204200729348.png" alt="image-20231204200729348"></p>
+<p><strong>D<strong><strong>HCP</strong></strong>模式自动获取I****P</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">**┌──(root****���****xuegod53)-[~]**</span><br><span class="line"></span><br><span class="line">**└─# vim /etc/network/interfaces**</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>auto lo</strong></p>
+<p><strong>iface lo inet loopback</strong></p>
+<p><strong>auto eth0</strong></p>
+<p><strong>iface eth0 inet dhcp</strong></p>
+</blockquote>
+<p><strong>重启网络服务：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">**┌──(root****���****xuegod53)-[~]**</span><br><span class="line"></span><br><span class="line">**└─# systemctl stop networking**   </span><br><span class="line"></span><br><span class="line">**┌──(root****���****xuegod53)-[~]**</span><br><span class="line"></span><br><span class="line">**└─# systemctl start networking** </span><br></pre></td></tr></table></figure>
+
+<p><strong>注：如果使用</strong> <strong>ystemctl restart networking</strong> <strong>重启网络服务，有时需要执行两次才能生效。所以最好先stop再start</strong> <strong>networking</strong> </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">**┌──(root****���****xuegod53)-[~]**</span><br><span class="line"></span><br><span class="line">**└─# ifconfig eth0**</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-配置sshd服务并使用xshell连接"><a href="#2-配置sshd服务并使用xshell连接" class="headerlink" title="2.配置sshd服务并使用xshell连接"></a>2.配置sshd服务并使用xshell连接</h3><p><strong>2</strong><strong>.2.1</strong>  <strong>允许root用户登录sshd服务</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">**┌──(root****���****xuegod53)-[~]**</span><br><span class="line"></span><br><span class="line">**└─# vim /etc/ssh/sshd_config**</span><br></pre></td></tr></table></figure>
+
+<p><strong>修改以下内容第3<strong><strong>4</strong></strong>行和第3<strong><strong>9</strong></strong>行</strong></p>
+<p><img src="/./kali.assets/image-20231204201321356.png" alt="image-20231204201321356"></p>
+<p><strong>把3<strong><strong>4</strong></strong>行的 “prohibit-password” 改为 “yes” 并把把3<strong><strong>4</strong></strong>行 和3<strong><strong>9</strong></strong>行前的”#”号删掉，改完效果如下图：</strong></p>
+<blockquote>
+<p><strong>注：prohibit-password：禁止密码</strong></p>
+<p><strong>PubkeyAuthentication****：公钥身份验证，开启此项允许Xshell配置SSH秘钥登录</strong></p>
+</blockquote>
+<p><strong>重启ssh服务：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">**└─****# /etc/init.d/ssh restart**                                                  </span><br><span class="line"></span><br><span class="line">**或：**</span><br><span class="line"></span><br><span class="line">**└─****# systemctl** **restart** **ssh**  </span><br></pre></td></tr></table></figure>
+
+<p>​                                                </p>
+<p><strong>配置ssh服务开机自动启动：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">**┌──(root****���****xuegod53)-[~]**</span><br><span class="line"></span><br><span class="line">**└─****# systemctl enable ssh**            </span><br></pre></td></tr></table></figure>
+
+<p><strong>查看ssh服务是否开机自动启动，如果e<strong><strong>nable</strong></strong>表示开机自动启动，如果disable表示开机不启动。</strong>                                                                                           </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">**┌──(root****���****xuegod53)-[~]**</span><br><span class="line"></span><br><span class="line">**└─****# systemctl is-enabled ssh**   </span><br></pre></td></tr></table></figure>
+
+<h3 id="3-使用xshell连接"><a href="#3-使用xshell连接" class="headerlink" title="3.使用xshell连接"></a>3.使用xshell连接</h3><h5 id="1-查看kali-IP地址是多少"><a href="#1-查看kali-IP地址是多少" class="headerlink" title="1&gt;查看kali IP地址是多少"></a><strong>1&gt;查看kali</strong> <strong>I<strong><strong>P</strong></strong>地址是多少</strong></h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">**┌──(root****���****xuegod53)-[~]**</span><br><span class="line"></span><br><span class="line">**└─# ifconfig** </span><br></pre></td></tr></table></figure>
+
+<p> <img src="/./kali.assets/image-20231208232620860.png" alt="image-20231208232620860"></p>
+<h5 id="2-设置姓名以及IP地址"><a href="#2-设置姓名以及IP地址" class="headerlink" title="2&gt;设置姓名以及IP地址"></a>2&gt;设置姓名以及IP地址</h5><p><img src="/./kali.assets/image-20231208232818397.png" alt="image-20231208232818397"></p>
+<h5 id="3-以root模式进入程序"><a href="#3-以root模式进入程序" class="headerlink" title="3&gt;以root模式进入程序"></a>3&gt;以root模式进入程序</h5><h5 id="4-设置用户名及密码"><a href="#4-设置用户名及密码" class="headerlink" title="4&gt;设置用户名及密码"></a>4&gt;设置用户名及密码</h5><h5 id="5-连接进入xshell中的虚拟机界面"><a href="#5-连接进入xshell中的虚拟机界面" class="headerlink" title="5&gt;连接进入xshell中的虚拟机界面"></a>5&gt;连接进入xshell中的虚拟机界面</h5><h5 id="总结：-1"><a href="#总结：-1" class="headerlink" title="总结："></a><strong>总结：</strong></h5><ul>
+<li><p>本地网络配置</p>
+</li>
+<li><p>配置sshd服务并使用xshell连接</p>
+</li>
+</ul>
 
                 
             </div>
@@ -491,7 +608,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2023/10/27/pig/">http://example.com/2023/10/27/pig/</a>
+                    <a href="http://example.com/2023/12/04/kali/">http://example.com/2023/12/04/kali/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -696,9 +813,48 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
+            <div class="card">
+                <a href="/2023/12/04/kali/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        
+                        <span class="card-title"></span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-12-04
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            John Doe
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2023/10/30/%E5%A4%A7%E4%B8%80%E7%9A%84%E5%AD%A6%E4%B9%A0%E8%A7%84%E5%88%92/">
                     <div class="card-image">
@@ -716,45 +872,8 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-10-30
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            John Doe
-                            
-                        </span>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                Next&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2023/10/19/hello-world/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
-                        
-                        <span class="card-title">Hello World</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-10-19
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-10-30
                             </span>
                         <span class="publish-author">
                             
